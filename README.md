@@ -16,7 +16,7 @@ The documentation for CIL can be accessed [here](https://tomographicimaging.gith
 
 Binary installation of CIL can be achieved with `conda` or `mamba`. `mamba`'s environment solver (`libmamba`) provides faster environment resolution so we recommend this route, although in many cases the default `conda` will still work but may be very slow.
 
-`miniconda` is a minimal installer for `conda`. Installation instructions can be found [here](https://docs.conda.io/projects/miniconda/en/latest/).
+`miniconda` is a minimal installer for `conda`. Installation instructions can be found [here](https://docs.conda.io/projects/miniconda/en/latest).
 You can then force your `conda` installation to use `libmamba` instructions are [here](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community).
 
 Alternatively, `mamba` can be installed via [`miniforge`](https://github.com/conda-forge/miniforge) which is another minimal installer for `conda` with optional support for `mamba`. In this case replace `conda` with `mamba` in the below commands.
@@ -81,14 +81,14 @@ git submodule update --init
 
 To create a conda environment with all the dependencies for building CIL run the following shell script:
 
-```sh
-sh scripts/create_local_env_for_cil_development.sh -n NUMPY_VERSION -p PYTHON_VERSION -e ENVIRONMENT_NAME
+```bash
+bash scripts/create_local_env_for_cil_development.sh
 ```
 
 Or with the CIL build and test dependencies:
 
-```sh
-sh scripts/create_local_env_for_cil_development_tests.sh -n NUMPY_VERSION -p PYTHON_VERSION -e ENVIRONMENT_NAME
+```bash
+bash scripts/create_local_env_for_cil_development.sh -t
 ```
 
 And then install CIL in to this environment using CMake.
